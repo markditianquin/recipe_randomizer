@@ -1,8 +1,8 @@
 import React from "react";
-import style from "./App.module.scss";
+import styles from "./App.module.scss";
 
 function App() {
-  return <div className={style.App}>This is working</div>;
+  return <div className={styles.App}>This is working</div>;
 }
 
 export default App;
