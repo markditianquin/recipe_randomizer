@@ -1,19 +1,21 @@
 import React from "react";
-import styles from "./App.module.scss";
 import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
 import { RecipeOTD } from "./containers/RecipeOTD";
 import { RecipeCalendar } from "./containers/RecipeCalendar";
+import { Layout } from "./components/Layout/Layout";
 
 function App() {
   return (
-    <div className={styles.App}>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/recipecalendar" component={RecipeCalendar} />
-          <Route path="/" exact component={RecipeOTD} />
-          <Redirect to="/" />
-        </Switch>
-      </BrowserRouter>
+    <div>
+      <Layout>
+        <BrowserRouter>
+          <Switch>
+            <Route path="/recipecalendar" component={RecipeCalendar} />
+            <Route path="/" exact component={RecipeOTD} />
+            <Redirect to="/" />
+          </Switch>
+        </BrowserRouter>
+      </Layout>
     </div>
   );
 }

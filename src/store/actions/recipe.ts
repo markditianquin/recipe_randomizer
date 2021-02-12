@@ -1,8 +1,5 @@
-import { Action } from "redux";
-import { ThunkAction } from "redux-thunk";
 import { Recipe } from "../../models/Recipe";
 import { AppThunk } from "../AppThunk";
-import { IRootState } from "../StoreConfiguration";
 import { Actions } from "./actionTypes";
 
 export const getAllRecipeStart = (): Actions => {
@@ -25,9 +22,9 @@ export const fetchRecipe = () => {
     // TODO: backend call
     const recipe: Recipe = {
       id: 1,
-      ingredients: ["lorem", "ipsum"],
+      ingredients: ["lorem", "ipsum", "lorem"],
       name: "Lorem",
-      preparationSteps: ["lorem", "ipsum"],
+      preparationSteps: ["lorem ipsum", "ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum", "lorem ipsum lorem ipsum"],
       imageURL:
         "https://th.bing.com/th/id/OIP.pGq7-4IIN3dc-KPp_OtV9QHaFj?w=208&h=180&c=7&o=5&dpr=2&pid=1.7",
       dateToCook: new Date(),
